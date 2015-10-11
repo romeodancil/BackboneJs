@@ -4,7 +4,7 @@ define([
 	'underscore',
 	'backbone',
 	'views/projects/list',
-	'views/projects/list'
+	'views/users/list'
 
 ], function ($, _, Backbone, ProjectListView, UserListView) {
 	var AppRouter = Backbone.Router.extend({
@@ -19,22 +19,19 @@ define([
 	var initialize = function(){
 		var app_router = new AppRouter;
 
-		app_router.on('showProjects', function(){
-
+		app_router.on('route:showProjects', function(){
 			var projectListView = new ProjectListView();
-			ProjectListView.render();
+			projectListView.render();
 
 		});
 
-		app_router.on('showUsers', function(){
-
+		app_router.on('route:showUsers', function(){
 			var userListView = new UserListView();
-			UserListView.render();
+			userListView.render();
 
 		});
 
-		app_router.on('defaultAction', function(actions){
-
+		app_router.on('route:defaultAction', function(actions){
 			console.log('no route', actions);
 
 		});
