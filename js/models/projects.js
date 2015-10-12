@@ -4,9 +4,22 @@ define([
 ], function(_, Backbone){
 
 	var ProjectModel = Backbone.Model.extend({
-		defaults: {
-			name: "Romeo Dancil"
+
+		initialize: function(){
+			this.getData();				
+		},
+
+		getData: function(){
+
+			var data = [{
+				fname : 'romeo',
+				laname: 'dancil'
+			}];
+
+			return data;
+
 		}
+
 	});
 
 	return ProjectModel;

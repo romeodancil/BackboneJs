@@ -11,12 +11,16 @@ define([
 		var ProjectListView = Backbone.View.extend({
 			el: $('#container'),
 
-			initialize: function(){
-				this.collection = new ProjectsCollection();
-				this.collection.add({ name: "Jen" });
+			render: function(){
 				
-				var compiledTemplate = _.template( projectListTemplate, { projects: this.collection.models } );
-				this.$el.html( compiledTemplate );
+				this.collection = new ProjectsCollection();
+
+				parseData = this.collection.toJSON();
+
+				console.log(this.collection.toJSON());
+				
+				var compiledTemplate = _.template( projectListTemplate, parseData);
+				$('#container').html( compiledTemplate );
 
 			}
 		});
