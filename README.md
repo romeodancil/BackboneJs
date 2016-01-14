@@ -14,3 +14,17 @@ gulp.task('default', function() {
 });
 ```
 # 2. Using Plugin & Minifying JavaScript
+## Plugins list
+### gulpjs.com/plugins
+npm install --save-dev gulp-uglify
+```javascript
+var gulp = require('gulp');
+var gulify = require('gulp-uglify');
+
+gulp.task('default', function() {
+	gulp.src('js/*.js')
+	.pipe(uglify())
+	.pipe(gulp.dest('min.js'))
+});
+```
+# 3. Named Tasks
