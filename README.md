@@ -2,8 +2,8 @@
 My Backbonejs Setup
 
 # 1. Installing gulp
-npm install -g gulp   		-> this will intall gulp on your system
-npm install --save-dev gulp -> 
+npm install -g gulp   		
+npm install --save-dev gulp 
 
 ## gulpfile.js
 
