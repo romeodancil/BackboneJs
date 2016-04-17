@@ -6,10 +6,9 @@ define([
 
 	var ProjectCollection = Backbone.Collection.extend({
 		model : indexModel,
-
-		initialize: function(){
-			this.add({title: 'list1'});
-			this.add({title: 'list2'});
+		url: "data/data.json",
+		parse: function (data) {
+			return data.employees
 		}
 
 	});

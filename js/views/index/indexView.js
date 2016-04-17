@@ -10,14 +10,19 @@ define([
 
 		var ProjectListView = Backbone.View.extend({
 			el: jQuery('#container'),
+
+			initialize: function (options) {
+				console.log('options', options.collections);
+			},
 			
 			render: function(){
-				this.collection = new indexCollection();
+				var data;
+				var compiledTemplate;
 
-				parseData = this.collection.toJSON();
+				/*parseData = this.collections.toJSON();
 				
-				var compiledTemplate = _.template(projectListTemplate);
-				this.$el.html( compiledTemplate );
+				compiledTemplate = _.template(projectListTemplate);
+				this.$el.html( compiledTemplate(parseData) );*/
 
 			}
 		});

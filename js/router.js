@@ -3,9 +3,10 @@ define([
 	'jquery',
 	'underscore',
 	'backbone',
+	'collections/indexCollection',
 	'views/index/indexView'
 
-], function (jQuery, _, Backbone, indexView) {
+], function (jQuery, _, Backbone, indexCollection, indexView) {
 	var AppRouter = Backbone.Router.extend({
 		routes: {
 			'mainindex': 'showIndex',
@@ -18,8 +19,14 @@ define([
 		var app_router = new AppRouter;
 
 		app_router.on('route:showIndex', function(){
-			var renderIndexview = new indexView();
-			renderIndexview.render();
+			var data = new indexCollection();
+			var renderIndexview = new indexView({
+				collections: data
+			});
+
+			data.fetch().done( function(data) {
+				renderIndexview.render(data);
+			});
 
 		});
 
