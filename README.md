@@ -1,6 +1,23 @@
 # BackboneJs
 My Backbonejs Setup
 
+# Installing Static Server in node
+npm install connect serve-static
+
+## server.js
+```javascript
+
+var connect = require('connect');
+var serveStatic = require('serve-static');
+connect().use(serveStatic(__dirname)).listen(8080, function(){
+    console.log('Server running on 8080...');
+});
+
+```
+
+### Run it.
+node server.js
+
 # 1. Installing gulp
 npm install -g gulp   		
 npm install --save-dev gulp 
