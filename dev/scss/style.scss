@@ -1,0 +1,19 @@
+$small: 400px;
+$medium: 700px;
+$large: 960px;
+$background: #eee;
+$font-color: red;
+
+
+$sussy: (
+	columns: 12,
+	gutters: 1/4,
+	math: fluid,
+	output: float,
+	gutter-position: inside,
+);
+
+body {
+	background: $background;
+	font-color: $font-color;
+}
