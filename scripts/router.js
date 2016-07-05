@@ -1,1 +1,0 @@
-define(["jquery","underscore","backbone","views/index/indexView"],function(n,e,o,t){var i=o.Router.extend({routes:{mainindex:"showIndex","*actions":"defaultAction"}}),r=function(){var n=new i;n.on("route:showIndex",function(){var n=new t;n.render()}),n.on("route:defaultAction",function(n){console.log("no route",n)}),o.history.start()};return{initialize:r}});

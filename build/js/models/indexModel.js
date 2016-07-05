@@ -1,0 +1,1 @@
+define(["underscore","backbone"],function(e,n){var a=n.Model.extend({url:"data/data.json"});return a});
