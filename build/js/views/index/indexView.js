@@ -1,1 +1,0 @@
-define(["jquery","underscore","backbone","text!/templates/index/indexView.html"],function(e,t,n,i){var l=n.View.extend({el:e("#container"),initialize:function(e){this.collections=e.collections},render:function(){var e;e=t.template(i),empData=this.collections.toJSON(),this.$el.html(e(empData))}});return l});
