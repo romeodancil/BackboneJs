@@ -1,12 +1,16 @@
 define([
-
 	'jquery',
 	'underscore',
 	'backbone',
 	'collections/indexCollection',
 	'views/index/indexView'
-
-], function (jQuery, _, Backbone, indexCollection, indexView) {
+], function (
+	jQuery, 
+	_,
+	Backbone,
+	indexCollection,
+	indexView
+) {
 	var AppRouter = Backbone.Router.extend({
 		routes: {
 			'mainindex': 'showIndex',
@@ -14,7 +18,7 @@ define([
 		}
 	});
 
-	var initialize = function(){
+	var initialize = function() {
 		
 		var app_router = new AppRouter;
 
@@ -24,7 +28,7 @@ define([
 				collections: data
 			});
 
-			data.fetch().done( function(response) {;
+			data.fetch().done( function(response) {
 			 	renderIndexview.render(); 	
 			});
   

@@ -20,5 +20,9 @@
     "handlebars": "2.0.0",
     "serve-static": "^1.11.1",
     "underscore": "1.6.0"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-minify": "0.0.12"
   }
 }

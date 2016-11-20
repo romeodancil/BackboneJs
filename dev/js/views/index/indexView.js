@@ -25,6 +25,8 @@ define([
 			compiledTemplate = _.template(projectListTemplate);
 			empData = this.collections.toJSON();
 
+			console.log('empData', empData);
+
 			this.$el.html(compiledTemplate(empData));
 
 		}
